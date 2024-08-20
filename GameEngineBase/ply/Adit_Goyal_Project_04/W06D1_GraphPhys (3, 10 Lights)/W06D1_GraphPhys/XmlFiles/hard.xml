@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ConfigSettings>
+	<PlyFiles>
+		<PlyFile PlyFilePath="ply/terrain.ply" colr="0.6" colb="0.0" colg="0.0" />
+		<PlyFile PlyFilePath="ply/buggy1.ply" colr="0.6" colb="0.2" colg="0.0" />
+		<PlyFile PlyFilePath="ply/t1L.ply" colr="0.4" colb="1.0" colg="1.0" />
+		<PlyFile PlyFilePath="ply/t1r.ply" colr="0.6" colb="0.6" colg="0.0" />
+		<PlyFile PlyFilePath="ply/t2l.ply" colr="0.8" colb="1.0" colg="0.6" />
+		<PlyFile PlyFilePath="ply/t2r.ply" colr="0.2" colb="0.6" colg="0.0" />
+		<PlyFile PlyFilePath="ply/sun.ply" colr="1.0" colb="1.0" colg="0.0" />
+	</PlyFiles>
+	<Scene>
+		<Scene ModelName="Terrain" PlyFilePath="ply/terrain.ply" rotx="0" roty="0" rotz="0" posx="0.2" posy="0.1" posz="0" scale="30.0" />
+		<Scene ModelName="buggy1" PlyFilePath="ply/buggy1.ply" rotx="0" roty="-45" rotz="0" posx="1.9" posy="0.1" posz="-0.3" scale="2.0" />
+		<Scene ModelName="tyreFrontLeft" PlyFilePath="ply/t1L.ply" rotx="0" roty="0" rotz="0" posx="0" posy="0" posz="-4" scale="2.5" />
+		<Scene ModelName="tyreFrontRight" PlyFilePath="ply/t1r.ply" rotx="0" roty="0" rotz="0" posx="-2.2" posy="0" posz="0.5" scale="1.25" />
+		<Scene ModelName="tyreBackLeft" PlyFilePath="ply/t2l.ply" rotx="0" roty="0" rotz="0" posx="-2.2" posy="0" posz="1" scale="1.25" />
+		<Scene ModelName="tyreBackRight" PlyFilePath="ply/t2r.ply" rotx="0" roty="0" rotz="0" posx="-3.6" posy="0" posz="-2.7" scale="4.0" />
+		<Scene ModelName="Sun" PlyFilePath="ply/sun.ply" rotx="0" roty="0" rotz="0" posx="1" posy="3" posz="-10" scale="1.0" />
+	</Scene>
+	<Camera>
+		<Camera eyex="-0.2" eyey="2" eyez="8.2" upx="0" upy="1" />
+	</Camera>
+	<Light>
+		<Light LightNumber="0" colr="1.0" colb="1.0" colg="1.0" ambx="0.9" amby="0.9" ambz="0.9" posx="1.65" posy="0.9" posz="-0.34" ca="0.9" la="0.9" qa="0.9" />
+		<Light LightNumber="1" colr="0.0" colb="0.0" colg="1.0" ambx="0.9" amby="0.9" ambz="0.9" posx="0.0" posy="1.0" posz="-3.8" ca="0.9" la="0.9" qa="0.9" />
+		<Light LightNumber="2" colr="1.0" colb="1.0" colg="0.0" ambx="0.9" amby="0.9" ambz="0.9" posx="1.0" posy="3.0" posz="-8.0" ca="0.1" la="0.1" qa="0.1" />
+		<Light LightNumber="3" colr="0.0" colb="1.0" colg="0.0" ambx="0.9" amby="0.9" ambz="0.9" posx="-2.0" posy="0.5" posz="0.7" ca="0.9" la="0.9" qa="0.9" />
+		<Light LightNumber="4" colr="0.0" colb="1.0" colg="0.0" ambx="0.9" amby="0.9" ambz="0.9" posx="-3.6" posy="0.5" posz="0.5" ca="0.9" la="0.9" qa="0.9" />
+		<Light LightNumber="5" colr="0.0" colb="1.0" colg="0.0" ambx="0.1" amby="0.1" ambz="0.1" posx="3.25" posy="0.5" posz="0.5" ca="0.9" la="1.0" qa="1.0" />
+		<Light LightNumber="6" colr="1.0" colb="0.0" colg="0.0" ambx="0.1" amby="0.1" ambz="0.1" posx="-1.0" posy="0.5" posz="-2.3" ca="0.9" la="1.0" qa="1.0" />
+		<Light LightNumber="7" colr="1.0" colb="0.0" colg="0.0" ambx="0.1" amby="0.1" ambz="0.1" posx="1.9" posy="0.5" posz="-2.3" ca="0.9" la="1.0" qa="1.0" />
+	</Light>
+</ConfigSettings>

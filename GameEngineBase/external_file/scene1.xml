@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Scene version="3.0">
+  <Header copyright="Nishant Sthalekar">
+     Few important points ----
+	 1. Texture-data node must always be before Model-data node 
+	 2. model flag - 0 is default , 1 is for player , 2 is for skybox 
+	 3. Light Index must be between 0 to 14 (Additional Lights need code-level changes)
+	 4. If Physics component is not a softBody then shape can be specified . Shape is to indicate which type of collision Body will it be treated as. Default is mesh of triangles (complex) 
+	 5. GameObject Name MUST be unique
+     <Application name="Nishant's template" version="1.99beta" />
+  </Header>
+    <Shader-data>
+      <shader name="water">
+        <component type="vertex" path="shaders/Water_Vertex.glsl" />
+        <component type="fragment" path="shaders/Water_Fragment.glsl" />
+        <uniform name="WorldMatrix" type="mat4" />
+        <uniform name="ViewMatrix" type="mat4" />
+        <uniform name="ProjectionMatrix" type="mat4" />
+        <uniform name="water_reflection" type="texture" />
+        <uniform name="water_refraction" type="texture" />
+        <uniform name="water_normalmap" type="texture" />
+        <uniform name="water_dudvmap" type="texture" />
+        <uniform name="water_depthmap" type="texture" />
+        <uniform name="viewpos" type="float4" />
+        <uniform name="lightpos" type="float4" />
+        <uniform name="waterColor" type="float4" />
+        <uniform name="waterDepth" type="float4" />
+        <uniform name="time" type="float1" />
+        <uniform name="time2" type="float1" />
+      </shader>
+      <shader name="post">
+        <component type="vertex" path="shaders/Common_Vertex.glsl" />
+        <component type="fragment" path="shaders/Simple_Fragment.glsl" />
+        <uniform name="WorldMatrix" type="mat4" />
+        <uniform name="ViewMatrix" type="mat4" />
+        <uniform name="ProjectionMatrix" type="mat4" />
+        <uniform name="texture1" type="texture" />
+      </shader>
+      <shader name="shadow">
+        <component type="vertex" path="shaders/Shadow_Vertex.glsl" />
+        <component type="fragment" path="shaders/Shadow_Fragment.glsl" />
+        <uniform name="depthMVP" type="mat4" />
+      </shader>
+		<shader name="simple">
+			<component type="vertex" path="shaders/Common_Vertex.glsl" />
+			<component type="fragment" path="shaders/Simple_Fragment_Shadow.glsl" />
+			<uniform name="WorldMatrix" type="mat4" />
+			<uniform name="ViewMatrix" type="mat4" />
+			<uniform name="ProjectionMatrix" type="mat4" />
+      <uniform name="lightViewMatrix" type="mat4" />
+			<uniform name="Shininess" type="float1" />
+			<uniform name="Strength" type="float1" />
+			<uniform name="texture1" type="texture" />
+      <uniform name="shadowMap" type="texture" />
+      <uniform name="depthMVP" type="mat4" />
+		</shader>
+		<shader name="skybox">
+			<component type="vertex" path="shaders/Common_Vertex.glsl" />
+			<component type="fragment" path="shaders/SkyBox_Fragment.glsl" />
+			<uniform name="WorldMatrix" type="mat4" />
+			<uniform name="ViewMatrix" type="mat4" />
+			<uniform name="ProjectionMatrix" type="mat4" />
+			<uniform name="skyMapTexture" type="skymap" />
+		</shader>
+  </Shader-data>
+  <Texture-data>
+	<texture type="skybox" name="SkyMap"
+				path_right="textures/under/water.bmp"
+				path_left="textures/under/water.bmp"
+				path_top="textures/under/water.bmp"
+				path_bottom="textures/under/water.bmp"
+				path_front="textures/under/water.bmp"
+				path_back="textures/under/water.bmp" />
+    <texture type="basic" name="Submarine" path="textures/VMaskCol.bmp" />
+    <texture type="basic" name="normalWater" path="textures/normalMapWater.bmp" />
+    <texture type="basic" name="dudvWater" path="textures/water4DUDV.bmp" />
+    <texture type="basic" name="waterText" path="textures/under/water.bmp" />
+	<texture type="basic" name="Body" path="textures/buggy.bmp" />
+	<texture type="basic" name="Tires" path="textures/tire.bmp" />
+	<texture type="basic" name="conTexture" path="textures/Brick.bmp" />
+    <texture type="basic" name="coco" path="textures/coco.bmp" />
+	<texture type="basic" name="wall" path="textures/wall.bmp" />
+    <texture type="basic" name="terrain" path="textures/vol.bmp" />
+   
+  </Texture-data>
+ <!-- ModelData -->
+  <Model-data>
+	<gameObject name="Skybox" shaderName="skybox"  type="normal">
+    <physics type="disabled"  constraint="disabled" iterations="1" friction="1.0">
+      <position x="0.0" y="0.0" z="0.0" />
+      <rotation x="0.0" y="2.0" z="0.0" />
+      <scale>175.0</scale>
+    </physics>
+    <modelInfo path="ply/Sphere_Smooth.ply" iterations="1" textureName="SkyMap" altTexture="NULL" modelMode="exc"/>
+		<model-flag>2</model-flag>
+	</gameObject>
+    <gameObject name="Vehicle"  shaderName="simple" type="normal" >
+    <physics type="hardBody" shape="chassis" constraint="disabled" iterations="1" friction="0.9">
+      <position x="-2.7" y="5.0" z="8.47" />
+      <rotation x="0.0" y="0.0" z="0.0" />
+      <scale>1.0</scale>
+    </physics>
+     <modelInfo path="ply/GameJamModels/kart.ply" iterations="1" textureName="Body"  altTexture="NULL" modelMode="exc"/> 
+     <physics type="empty" shape="wheel1" constraint="disabled" iterations="1" friction="0.9">
+    </physics>
+      <modelInfo path="ply/GameJamModels/tyre-left-back.ply" iterations="1" textureName="Tires"  altTexture="NULL" modelMode="exc"/>
+     <physics type="empty" shape="wheel2" constraint="disabled" iterations="1" friction="0.9">
+     </physics>
+     <modelInfo path="ply/GameJamModels/tyre-left-back.ply" iterations="1" textureName="Tires"  altTexture="NULL" modelMode="exc"/>
+     <physics type="empty" shape="wheel3" constraint="disabled" iterations="1" friction="0.9">
+     </physics>
+     <modelInfo path="ply/GameJamModels/tyre-left-back.ply" iterations="1" textureName="Tires"  altTexture="NULL" modelMode="exc"/>
+     <physics type="empty" shape="wheel4" constraint="disabled" iterations="1" friction="0.9">
+     </physics>
+     <modelInfo path="ply/GameJamModels/tyre-left-back.ply" iterations="1" textureName="Tires"  altTexture="NULL" modelMode="exc"/>
+   <model-flag>1</model-flag>
+	</gameObject>
+    <gameObject name="Base"  shaderName="simple" type="normal">
+      <physics type="hardBody" shape="complex" constraint="disabled" iterations="1" friction="5.0">
+        <position x="0.0" y="0.5" z="0.0" />
+        <rotation x="0.0" y="0.0" z="0.0" />
+        <scale>1.0</scale>
+      </physics>
+      <modelInfo path="ply/finalMods/baselo.ply" iterations="1" textureName="terrain"  altTexture="NULL" modelMode="exc"/>
+      <model-flag>0</model-flag>
+    </gameObject>
+    <gameObject name="checkpoint1"  shaderName="simple" type="checkpoint">
+        <physics type="phantom" shape="complex" constraint="disabled" iterations="1" friction="1.0">
+          <position x="-2.35" y="5.0" z="-61.0" /> 
+          <rotation x="0.0" y="0.0" z="0.0" />
+          <minExtent x="-10.5" y="-5.5" z="-10.5" />
+          <maxExtent x="10.5" y="5.5" z="10.5" />
+          <scale>1.0</scale>
+        </physics>
+        <model-flag>0</model-flag>
+      </gameObject>
+    <gameObject name="checkpoint2"  shaderName="simple" type="checkpoint">
+      <physics type="phantom" shape="complex" constraint="disabled" iterations="1" friction="1.0">
+        <position x="-18.35" y="2.0" z="46.0" />
+        <rotation x="0.0" y="0.0" z="0.0" />
+        <minExtent x="-10.5" y="-5.5" z="-10.5" />
+        <maxExtent x="10.5" y="5.5" z="10.5" />
+        <scale>1.0</scale>
+      </physics>
+      <model-flag>0</model-flag>
+    </gameObject>
+    <gameObject name="sea"  shaderName="water"  type="normal">
+      <physics type="disabled"  constraint="disabled" iterations="1" friction="1.0">
+        <position x="0.0" y="0.0" z="0.0" />
+        <rotation x="0.0" y="0.0" z="0.0" />
+        <scale>1.0</scale>
+      </physics>
+      <modelInfo path="ply/finalMods/ocean.ply" iterations="1" textureName="waterText" altTexture="NULL" modelMode="exc"/>
+      <model-flag>0</model-flag>
+    </gameObject>
+  <gameObject name="Quad"  shaderName="post"  type="normal">
+    <physics type="disabled"  constraint="disabled" iterations="1" friction="1.0">
+      <position x="0.0" y="0.0" z="0.0" />
+      <rotation x="0.0" y="0.0" z="0.0" />
+      <scale>1.0</scale>
+    </physics>
+    <modelInfo path="ply/quad.ply" iterations="1" textureName="Submarine" altTexture="NULL" modelMode="exc"/>
+      <model-flag>0</model-flag>
+    </gameObject>
+  </Model-data>
+  
+ <!--  Lights Data -->
+  
+  <Lights-data>
+	<light index="0" type="directional">
+		<!--<colour red="0.98" green="0.85" blue="0.36"/>-->
+		<colour red="1.0" green="1.0" blue="1.0"/>
+    <ambient red="0.2" green="0.2" blue="0.2"/>
+    <position x="0.436" y="2.0" z="1.0" />
+		<attenuation constant="0.1" linear="0.1" quadratic="0.1" />
+    <halfvector x="0.0" y="-1.0" z="0.0"/>
+	</light>
+	
+  </Lights-data>
+  
+</Scene>

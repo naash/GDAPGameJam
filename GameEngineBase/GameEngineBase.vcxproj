@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44DC6053-76AC-47D7-957F-E5EFE06574FA}</ProjectGuid>
+    <RootNamespace>GameEngineBase</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>G:\Game Development Term 2\Physics 2\havok\Havok_2013\hk2013_1_0_r1\Source;D:\Game development and advanced programming\hk2013_1_0_r1\Source;$(ProjectDir)\externals\GL-Include;$(IncludePath)</IncludePath>
+    <LibraryPath>G:\Game Development Term 2\Physics 2\havok\Havok_2013\hk2013_1_0_r1\Lib\win32_vs2012_win8\debug_dll;D:\Game development and advanced programming\hk2013_1_0_r1\Lib\win32_vs2012_win7\debug_dll;$(ProjectDir)\externals\GL-Lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Game development and advanced programming\hk2013_1_0_r1\Source;$(ProjectDir)\externals\GL-Include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Game development and advanced programming\hk2013_1_0_r1\Lib\win32_vs2012_win7\release;$(ProjectDir)\externals\GL-Lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HK_CONFIG_SIMD=1;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;freeglut.lib;hkBase.lib;hkCompat.lib;hkGeometryUtilities.lib;hkInternal.lib;hkSceneData.lib;hkSerialize.lib;hkVisualize.lib;hkaInternal.lib;hkaAnimation.lib;hkaPhysics2012Bridge.lib;hkpConstraint.lib;hkpConstraintSolver.lib;hkpCollide.lib;hkpDynamics.lib;hkpInternal.lib;hkpUtilities.lib;hkpVehicle.lib;hkcdCollide.lib;hkcdInternal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_RELEASE;_CONSOLE;HK_CONFIG_SIMD=1;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;freeglut.lib;hkBase.lib;hkCompat.lib;hkGeometryUtilities.lib;hkInternal.lib;hkSceneData.lib;hkSerialize.lib;hkVisualize.lib;hkaInternal.lib;hkaAnimation.lib;hkaPhysics2012Bridge.lib;hkpConstraint.lib;hkpConstraintSolver.lib;hkpCollide.lib;hkpDynamics.lib;hkpInternal.lib;hkpUtilities.lib;hkpVehicle.lib;hkcdCollide.lib;hkcdInternal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="basePhyComp.h" />
+    <ClInclude Include="boundingBox.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="CHRTimer.h" />
+    <ClInclude Include="collisionTest.h" />
+    <ClInclude Include="cubeShape.h" />
+    <ClInclude Include="gameManager.h" />
+    <ClInclude Include="havokPhantomComponent.h" />
+    <ClInclude Include="havokPhyComp.h" />
+    <ClInclude Include="havokRigidBody.h" />
+    <ClInclude Include="HavokVehicle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="hud.h" />
+    <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="TyreRayCastCollideClass.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Idelegator.h" />
+    <ClInclude Include="IMediator.h" />
+    <ClInclude Include="IPhysicsComp.h" />
+    <ClInclude Include="mediator.h" />
+    <ClInclude Include="delegator.h" />
+    <ClInclude Include="fileDataLoader.h" />
+    <ClInclude Include="gameObject.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="master.h" />
+    <ClInclude Include="modelData.h" />
+    <ClInclude Include="movementManager.h" />
+    <ClInclude Include="particleGen.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="plyInfo.h" />
+    <ClInclude Include="rotationalVar.h" />
+    <ClInclude Include="shaderUniformVariables.h" />
+    <ClInclude Include="shape.h" />
+    <ClInclude Include="softBodyComp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="sphere.h" />
+    <ClInclude Include="sphereShape.h" />
+    <ClInclude Include="springs.h" />
+    <ClInclude Include="textureData.h" />
+    <ClInclude Include="Vector3D.h" />
+    <ClInclude Include="vertexType.h" />
+    <ClInclude Include="xmlParser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="basePhyComp.cpp" />
+    <ClCompile Include="boundingBox.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="CHRTimer.cpp" />
+    <ClCompile Include="collisionTest.cpp" />
+    <ClCompile Include="delegator.cpp" />
+    <ClCompile Include="fileDataLoader.cpp" />
+    <ClCompile Include="gameManager.cpp" />
+    <ClCompile Include="gameObject.cpp" />
+    <ClCompile Include="glfont2.cpp" />
+    <ClCompile Include="havokPhantomComp.cpp" />
+    <ClCompile Include="havokPhyComp.cpp" />
+    <ClCompile Include="havokRigidBody.cpp" />
+    <ClCompile Include="HavokVehicle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="hud.cpp" />
+    <ClCompile Include="mediator.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="modelData.cpp" />
+    <ClCompile Include="movementManager.cpp" />
+    <ClCompile Include="openGL_CloseFunc.cpp" />
+    <ClCompile Include="openGL_DisplayFunc.cpp" />
+    <ClCompile Include="openGL_ErrorCntrl.cpp" />
+    <ClCompile Include="openGL_IdleFunc.cpp" />
+    <ClCompile Include="openGL_Init.cpp" />
+    <ClCompile Include="openGL_KeyboardSplFunc.cpp" />
+    <ClCompile Include="openGL_resize.cpp" />
+    <ClCompile Include="particleGen.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="shaderUniformVariables.cpp" />
+    <ClCompile Include="softBodyComp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp" />
+    <ClCompile Include="spring.cpp" />
+    <ClCompile Include="textureData.cpp" />
+    <ClCompile Include="Vector3D.cpp" />
+    <ClCompile Include="xmlParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="external_file\scene1.xml" />
+    <Xml Include="external_file\scene2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\Common_Vertex.glsl" />
+    <None Include="shaders\Complex_Shadow_Fragment.glsl" />
+    <None Include="shaders\Shadow_Fragment.glsl" />
+    <None Include="shaders\Shadow_Vertex.glsl" />
+    <None Include="shaders\Simple_Fragment.glsl" />
+    <None Include="shaders\Simple_Fragment_old.glsl" />
+    <None Include="shaders\Simple_Fragment_Shadow.glsl" />
+    <None Include="shaders\SkyBox_Fragment.glsl" />
+    <None Include="shaders\Water_Fragment.glsl" />
+    <None Include="shaders\Water_Vertex.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{11D21AB7-BF25-428B-82E0-784DC7C2C4FD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OpenGLForTheWin</RootNamespace>
+    <ProjectName>W06D1_GraphPhys</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(ProjectDir)external libraries\lib\gl\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\CND\Tools\glfont2;C:\CND\Tools\glm;$(ProjectDir)external libraries\include;C:\CND\Tools\pugixml-1.5\src;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(ProjectDir)external libraries\lib\gl\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\CND\Tools\glfont2;C:\CND\Tools\glm;$(ProjectDir)external libraries\include;C:\CND\Tools\pugixml-1.5\src;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CBunny.cpp" />
+    <ClCompile Include="CCamera.cpp" />
+    <ClCompile Include="CMessage.cpp" />
+    <ClCompile Include="CFactoryMediator.cpp" />
+    <ClCompile Include="CHRTimer.cpp" />
+    <ClCompile Include="CModelLoaderManager.cpp" />
+    <ClCompile Include="CNameValuePair.cpp" />
+    <ClCompile Include="CNinjaTeapot.cpp" />
+    <ClCompile Include="CPlyFile5nt.cpp" />
+    <ClCompile Include="CTriangle.cpp" />
+    <ClCompile Include="CVector3f.cpp" />
+    <ClCompile Include="CVertex.cpp" />
+    <ClCompile Include="CGameObject.cpp" />
+    <ClCompile Include="glfont2.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="glutClose_callback.cpp" />
+    <ClCompile Include="glutDisplay_callback.cpp" />
+    <ClCompile Include="glutKeyboardSpecial_callbacks.cpp" />
+    <ClCompile Include="glutReshape_callback.cpp" />
+    <ClCompile Include="LangXml.cpp" />
+    <ClCompile Include="pugixml.cpp" />
+    <ClCompile Include="ShaderUniformVariables.cpp" />
+    <ClCompile Include="OpenGL_Initialize.cpp" />
+    <ClCompile Include="printTheWhatsThisProgramAboutBlurb.cpp" />
+    <ClCompile Include="ShaderTypes.cpp" />
+    <ClCompile Include="SuperBasic_GLEW_freeGLUT.cpp" />
+    <ClCompile Include="Utils_NO_LONGER_NEEDED.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="VertexTypes.cpp" />
+    <ClCompile Include="XmlUpdate.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBunny.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="CCamera.h" />
+    <ClInclude Include="CMessage.h" />
+    <ClInclude Include="CFactoryMediator.h" />
+    <ClInclude Include="CGameObject.h" />
+    <ClInclude Include="CHRTimer.h" />
+    <ClInclude Include="CModelLoaderManager.h" />
+    <ClInclude Include="CNameValuePair.h" />
+    <ClInclude Include="CNinjaTeapot.h" />
+    <ClInclude Include="CPlyFile5nt.h" />
+    <ClInclude Include="CPlyInfo.h" />
+    <ClInclude Include="CTriangle.h" />
+    <ClInclude Include="CVector3f.h" />
+    <ClInclude Include="CVector4f.h" />
+    <ClInclude Include="CVertex.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="IFactory.h" />
+    <ClInclude Include="IMediator.h" />
+    <ClInclude Include="LangXml.h" />
+    <ClInclude Include="QnDPly.h" />
+    <ClInclude Include="ShaderTypes.h" />
+    <ClInclude Include="ShaderUniformVariables.h" />
+    <ClInclude Include="Utils_NO_LONGER_NEEDED.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="VertexTypes.h" />
+    <ClInclude Include="XmlUpdate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="whats_this.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\OpenGLProgGuidMutipleLights.fragment.glsl" />
+    <None Include="shaders\OpenGLProgGuidMutipleLights.vertex.glsl" />
+    <None Include="shaders\PointLight_OpenGLGuide.fragment.glsl" />
+    <None Include="shaders\PointLight_OpenGLGuide.vertex.glsl" />
+    <None Include="shaders\SimpleShader.fragment.glsl" />
+    <None Include="shaders\SimpleShader.vertex.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  
+   
+  <!--Property 1-->
+  <PropertyGroup>
+	<BuildDir>..\..\Project_04</BuildDir>
+  </PropertyGroup>
+  
+<!--Property 2-->
+  <PropertyGroup>
+  <MyName>Adit Goyal</MyName>
+    <ExeDir>..\Release</ExeDir><!--For Exe Copying-->
+</PropertyGroup>
+  
+  <!--Property 3-->
+<PropertyGroup>
+  <MyMessage>Creating the Directory for Project build</MyMessage>
+</PropertyGroup>
+
+<!--Target tasks-->
+  
+  <!--On Condition Release Configuration-->
+
+  <!--Depends On Target Applied-->
+  
+  <Target Name="Project_04" Condition="'$(Configuration)'=='Release'" DependsOnTargets="TagetCondition">
+  <!--Displaying the Property 3 -->
+ 
+    <Message Text="$(MyMessage)"/>
+  
+    <!--Creating the directory from path Property 1-->
+      <MakeDir
+    Directories="$(BuildDir)"/>
+  
+
+<CreateItem Include="ply\**\*.*">
+    		<Output TaskParameter="Include" ItemName="myPly" />
+    	</CreateItem>
+		<Copy SourceFiles="@(myPly)"
+    			DestinationFiles="@(myPly->'$(BuildDir)\ply\%(RecursiveDir)%(Filename)%(Extension)')" />
+		
+  <!--Item 2-Copying the shader files-->
+  <CreateItem Include="shaders\**\*.*">
+    		<Output TaskParameter="Include" ItemName="myShaders" />
+    	</CreateItem>
+		<Copy SourceFiles="@(myShaders)"
+    			DestinationFiles="@(myShaders->'$(BuildDir)\shaders\%(RecursiveDir)%(Filename)%(Extension)')" />
+		
+<!--Item 3-Copying the Xml and Font files-->
+  <CreateItem Include="XmlFiles\**\*.*">
+    		<Output TaskParameter="Include" ItemName="myXmlAndFont" />
+    	</CreateItem>
+		<Copy SourceFiles="@(myXmlAndFont)"
+    			DestinationFiles="@(myXmlAndFont->'$(BuildDir)\XmlFiles\%(RecursiveDir)%(Filename)%(Extension)')" />
+		
+<!--Item 4-Copying the dll files-->
+  <CreateItem Include="*.dll">
+    		<Output TaskParameter="Include" ItemName="myDlls" />
+    	</CreateItem>
+		<Copy SourceFiles="@(myDlls)"
+    			DestinationFiles="@(myDlls->'$(BuildDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+		
+  <!--Item 5-Copying the exe files-->
+  <CreateItem Include="$(ExeDir)\*.exe">
+    		<Output TaskParameter="Include" ItemName="myDlls" />
+    	</CreateItem>
+		<Copy SourceFiles="@(myDlls)"
+    			DestinationFiles="@(myDlls->'$(BuildDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+</Target>
+
+<!--Target Condition for Depends on target-->
+<Target Name="TagetCondition">
+  
+  <!--Property 2-1 used here-->
+<Message Text="My Name Is $(MyName)"/>
+
+</Target>
+
+</Project>

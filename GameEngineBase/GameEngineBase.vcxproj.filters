@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Types">
+      <UniqueIdentifier>{daa2aff0-20e1-441a-8a63-5e93f8949e5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{1711b83d-32d8-4733-ae1c-533a66e48690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{52515051-8920-4deb-8ef7-ac0cef732702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{5f61f937-2141-489b-bdca-2f2b77c2f197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegator">
+      <UniqueIdentifier>{ca248fbb-a184-42da-a6db-63ffbe66a518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModelData">
+      <UniqueIdentifier>{3cd021dd-0571-4aee-96bf-4f76907e7196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{c5222588-dca0-4d74-8091-f33070f3a92c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{2f8b5de5-7b18-472a-a6b3-25873aa2bcb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates">
+      <UniqueIdentifier>{2cee3561-61a3-46e4-962c-77b9b2fe0818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates\LoadFromFile">
+      <UniqueIdentifier>{cd316bfb-4c0e-497b-b6b1-6e623be386d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates\Mediator">
+      <UniqueIdentifier>{6b12ffa2-e929-491c-86fa-c2c5abfabc3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates\Movement">
+      <UniqueIdentifier>{d917a4c9-2705-44eb-83e4-30a8699f7421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{d150d409-2ff8-49b5-bc5f-0b62b8a9825d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates\Collision">
+      <UniqueIdentifier>{473bff09-c28a-4333-8242-2afe9ebe0315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderFiles">
+      <UniqueIdentifier>{b67ecdbb-4459-49c4-970e-0f9235163a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BoundingBox">
+      <UniqueIdentifier>{c61d17f0-bfb2-45b3-a252-62f3fffa4719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates\Particles">
+      <UniqueIdentifier>{d54db834-2b13-4d4f-b81b-58b311000bd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{b47e1353-69cb-40ea-8c30-4eb093a6e96e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhysicsComponents">
+      <UniqueIdentifier>{8e8ecd82-9c2e-40b9-b3eb-629e47e668d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates\Collision\Shapes">
+      <UniqueIdentifier>{ca878d90-0454-4970-aaaf-c6382a4fd38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConfigFile">
+      <UniqueIdentifier>{3b7ae135-7149-42dd-9822-825be0020377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Havok Vehicle">
+      <UniqueIdentifier>{b224253e-3c5c-47fc-a4c9-295d8ddfb2d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Text">
+      <UniqueIdentifier>{66461e62-5e10-4a3f-8b5d-b1f60eda34d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameManager">
+      <UniqueIdentifier>{b156c27a-728a-4b81-b4d4-77459e8b0589}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vector3D.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="master.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHRTimer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="gameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="plyInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modelData.h">
+      <Filter>ModelData</Filter>
+    </ClInclude>
+    <ClInclude Include="vertexType.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderUniformVariables.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="fileDataLoader.h">
+      <Filter>Delegates\LoadFromFile</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="delegator.h">
+      <Filter>Delegator</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="mediator.h">
+      <Filter>Delegates\Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="movementManager.h">
+      <Filter>Delegates\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="collisionTest.h">
+      <Filter>Delegates\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="boundingBox.h">
+      <Filter>BoundingBox</Filter>
+    </ClInclude>
+    <ClInclude Include="particleGen.h">
+      <Filter>Delegates\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="textureData.h">
+      <Filter>Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlParser.h">
+      <Filter>Delegates\LoadFromFile</Filter>
+    </ClInclude>
+    <ClInclude Include="basePhyComp.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="IPhysicsComp.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="softBodyComp.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="springs.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="IMediator.h">
+      <Filter>Delegates\Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="shape.h">
+      <Filter>Delegates\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="sphereShape.h">
+      <Filter>Delegates\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="cubeShape.h">
+      <Filter>Delegates\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Idelegator.h">
+      <Filter>Delegator</Filter>
+    </ClInclude>
+    <ClInclude Include="rotationalVar.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="havokRigidBody.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="havokPhyComp.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="TyreRayCastCollideClass.h">
+      <Filter>GameObject\Havok Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="HavokVehicle.h">
+      <Filter>GameObject\Havok Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderClass.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="havokPhantomComponent.h">
+      <Filter>PhysicsComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="hud.h">
+      <Filter>Text</Filter>
+    </ClInclude>
+    <ClInclude Include="gameManager.h">
+      <Filter>GameManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>Types</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_Init.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_ErrorCntrl.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_resize.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_IdleFunc.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="CHRTimer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_CloseFunc.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_KeyboardSplFunc.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="gameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="modelData.cpp">
+      <Filter>ModelData</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderUniformVariables.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="fileDataLoader.cpp">
+      <Filter>Delegates\LoadFromFile</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="delegator.cpp">
+      <Filter>Delegator</Filter>
+    </ClCompile>
+    <ClCompile Include="openGL_DisplayFunc.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="mediator.cpp">
+      <Filter>Delegates\Mediator</Filter>
+    </ClCompile>
+    <ClCompile Include="movementManager.cpp">
+      <Filter>Delegates\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="collisionTest.cpp">
+      <Filter>Delegates\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="boundingBox.cpp">
+      <Filter>BoundingBox</Filter>
+    </ClCompile>
+    <ClCompile Include="particleGen.cpp">
+      <Filter>Delegates\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="textureData.cpp">
+      <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlParser.cpp">
+      <Filter>Delegates\LoadFromFile</Filter>
+    </ClCompile>
+    <ClCompile Include="basePhyComp.cpp">
+      <Filter>PhysicsComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="softBodyComp.cpp">
+      <Filter>PhysicsComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="spring.cpp">
+      <Filter>PhysicsComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="havokRigidBody.cpp">
+      <Filter>PhysicsComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="havokPhyComp.cpp">
+      <Filter>PhysicsComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="HavokVehicle.cpp">
+      <Filter>GameObject\Havok Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderClass.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="havokPhantomComp.cpp">
+      <Filter>PhysicsComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="glfont2.cpp">
+      <Filter>Text</Filter>
+    </ClCompile>
+    <ClCompile Include="hud.cpp">
+      <Filter>Text</Filter>
+    </ClCompile>
+    <ClCompile Include="gameManager.cpp">
+      <Filter>GameManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="external_file\scene1.xml">
+      <Filter>ConfigFile</Filter>
+    </Xml>
+    <Xml Include="external_file\scene2.xml">
+      <Filter>ConfigFile</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\Common_Vertex.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Complex_Shadow_Fragment.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Shadow_Fragment.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Shadow_Vertex.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Simple_Fragment.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Simple_Fragment_old.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Simple_Fragment_Shadow.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\SkyBox_Fragment.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Water_Fragment.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+    <None Include="shaders\Water_Vertex.glsl">
+      <Filter>ShaderFiles</Filter>
+    </None>
+  </ItemGroup>
+</Project>

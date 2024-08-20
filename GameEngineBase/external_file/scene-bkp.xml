@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Scene version="3.0">
+  <Header copyright="Nishant Sthalekar">
+     Few important points ----
+	 1. Texture-data node must always be before Model-data node 
+	 2. model flag - 0 is default , 1 is for player , 2 is for skybox 
+	 3. Light Index must be between 0 to 14 (Additional Lights need code-level changes)
+	 4. If Physics component is not a softBody then shape can be specified . Shape is to indicate which type of collision Body will it be treated as. Default is mesh of triangles (complex) 
+	 5. GameObject Name MUST be unique
+     <Application name="Nishant's template" version="1.99beta" />
+  </Header>
+  <Texture-data>
+	<texture type="skybox" name="SkyMap"
+				path_right="textures/under/water.bmp"
+				path_left="textures/under/water.bmp"
+				path_top="textures/under/water.bmp"
+				path_bottom="textures/under/water.bmp"
+				path_front="textures/under/water.bmp"
+				path_back="textures/under/water.bmp" />
+    <texture type="basic" name="Submarine" path="textures/VMaskCol.bmp" />
+	<texture type="basic" name="Cave" path="textures/caveTexture.bmp" />
+	<texture type="basic" name="Particle" path="textures/VMaskCol.bmp" />
+	<texture type="basic" name="Sph" path="textures/medusa.bmp" />
+	<texture type="basic" name="Star" path="textures/Star.bmp" />
+	<texture type="basic" name="conTexture" path="textures/Brick.bmp" />
+	<texture type="basic" name="Jelly" path="textures/jelly.bmp" />
+	<texture type="basic" name="lava" path="textures/lava.bmp" />
+	<texture type="basic" name="football" path="textures/football.bmp" />
+	<texture type="basic" name="wall" path="textures/wall.bmp" />
+  </Texture-data>
+  <Model-data>
+	<gameObject name="Skybox" path="ply/Sphere_Smooth.ply" textureIndex="0" altTexture="NULL" modelMode="exc">
+		<physics type="disabled"  constraint="disabled"/>
+		<position x="0.0" y="0.0" z="0.0" />
+		<rotation x="0.0" y="2.0" z="0.0" />
+		<scale>75.0</scale>
+		<model-flag>2</model-flag>
+	</gameObject>
+		<gameObject name="Sphere" path="ply/desertBall.ply" textureIndex="9" altTexture="8" modelMode="exc">
+		<physics type="hardBody" shape="sphere"  constraint="disabled"/>
+		<position x="0.0" y="10.0" z="0.0" />
+		<rotation x="0.0" y="0.0" z="0.0" />
+		<scale>1.0</scale>
+		<model-flag>1</model-flag>
+	</gameObject>
+	<gameObject name="Base" path="ply/roomFinal.ply" textureIndex="10" altTexture="NULL" modelMode="exc">
+		<physics type="hardBody" shape="complex"  constraint="disabled"/>
+		<position x="0.0" y="0.0" z="0.0" />
+		<rotation x="0.0" y="0.0" z="0.0" />
+		<scale>1.0</scale>
+		<model-flag>0</model-flag>
+	</gameObject>
+	<gameObject name="Cube1" path="ply/Cube.ply" textureIndex="10"  altTexture="NULL" modelMode="exc">
+		<physics type="hardBody" shape="box"  constraint="disabled"/>
+		<position x="3.0" y="10.0" z="0.0" />
+		<rotation x="0.0" y="0.0" z="0.0" />
+		<scale>1.0</scale>
+		<model-flag>0</model-flag>
+	</gameObject>
+	<gameObject name="Cube2" path="ply/Cube.ply" textureIndex="10"  altTexture="NULL" modelMode="exc">
+		<physics type="hardBody" shape="box"  constraint="enabled"/>
+		<constraint body="Cube1" type="Hinge"/>
+		<position x="2.0" y="9.0" z="-1.0" />
+		<rotation x="0.0" y="0.0" z="0.0" />
+		<scale>1.0</scale>
+		<model-flag>0</model-flag>
+	</gameObject>
+  </Model-data>
+  <Lights-data>
+	<light index="1">
+		<colour red="0.0" green="0.5" blue="0.1"/>
+		<ambient red="0.0" green="0.8" blue="0.1"/>
+		<position x="5.0" y="8.0" z="-5.0" />
+		<attenuation constant="0.1" linear="0.1" quadratic="0.1" />
+	</light>
+	<light index="2">
+		<colour red="0.0" green="0.1" blue="0.5"/>
+		<ambient red="0.0" green="0.1" blue="0.8"/>
+		<position x="0.0" y="8.0" z="-5.0" />
+		<attenuation constant="0.1" linear="0.1" quadratic="0.1" />
+	</light>
+	<light index="3">
+		<colour red="0.0" green="0.5" blue="0.1"/>
+		<ambient red="0.0" green="0.8" blue="0.1"/>
+		<position x="5.0" y="0.0" z="-5.0" />
+		<attenuation constant="0.1" linear="0.1" quadratic="0.1" />
+	</light>
+	<light index="4">
+		<colour red="0.0" green="0.1" blue="0.5"/>
+		<ambient red="0.0" green="0.1" blue="0.8"/>
+		<position x="0.0" y="0.0" z="-5.0" />
+		<attenuation constant="0.1" linear="0.1" quadratic="0.1" />
+	</light>
+  </Lights-data>
+  
+</Scene>

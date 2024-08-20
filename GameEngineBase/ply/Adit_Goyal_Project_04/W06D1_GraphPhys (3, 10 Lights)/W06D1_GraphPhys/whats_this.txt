@@ -1,0 +1,16 @@
+Game Development - Advanced Programming Graphics Project 1 <cr>
+Shows multi-model loading and Lighting <cr>
+<cr>
+Usage: <cr>
+<cr>
+* AWXD: Move camera around <cr>
+* S or s: To save The data At Any State <cr>
+* Q or q :To Quit After Closing The Display Screen <cr>
+* F or f: To cycle through Each Object to Access <cr>
+* I-K,i-k: Move object up and down Y -axis <cr>
+* J-L,j-l: Move Object Right Or left X-Axis <cr>
+* O-P,o-p: Move Object Forward And Backward to Z-Axis <cr>
+* P-p: To pause the screen process <cr>
+*1-3: On console for choosing the file to render <cr>
+*1-4: On graphical display about the language which can be selected by the user <cr>
+<cr>

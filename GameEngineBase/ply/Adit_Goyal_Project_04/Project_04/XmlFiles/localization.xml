@@ -1,0 +1,90 @@
+<Localization>
+<Language LanguageID = "EN">
+<String_1>Welcome</String_1>
+<String_2>Thanks for choosing this game!</String_2>
+<String_3>Scene is Paused. Press "P" again</String_3>
+<String_4>If you need to pause press "P" key.</String_4>
+<String_5>Press "P" key again to continue.</String_5>
+<String_6>Camera Eye X</String_6>
+<String_7>Camera Eye Y</String_7>
+<String_8>Camera Eye Z</String_8>
+<String_9>Camera Pos X</String_9>
+<String_10>Camera Pos Y</String_10>
+<String_11>Model Pos X</String_11>
+<String_12>Model Pos Y</String_12>
+<String_13>Model Pos Z</String_13>
+<String_14>Model Rot X</String_14>
+<String_15>Model Rot Y</String_15>
+<String_16>Model Rot Y</String_16>
+<String_17>Model Scale</String_17>
+<String_18>Name of Model</String_18>
+<String_19>Path Of Model</String_19>
+<String_20>Scene is Saved</String_20>
+</Language>
+<Language LanguageID = "FR">
+<String_1>Bienvenue</String_1>
+<String_2>Merci d'avoir choisi ce jeu!</String_2>
+<String_3>Scène est en pause . Appuyez sur " P " à nouveau</String_3>
+<String_4>Si vous avez besoin de faire une pause appuyez sur la touche "P"</String_4>
+<String_5>Appuyez sur la touche "P" à nouveau pour continuer.</String_5>
+<String_6>Caméra Eye X</String_6>
+<String_7>Caméra Y</String_7>
+<String_8>Caméra Eye Z</String_8>
+<String_9>Caméra Pos X</String_9>
+<String_10>Caméra Pos Y</String_10>
+<String_11>modèle  Pos X</String_11>
+<String_12>modèle  Pos Y</String_12>
+<String_13>modèle  Pos Z</String_13>
+<String_14>modèle  Rot X</String_14>
+<String_15>modèle  Rot Y</String_15>
+<String_16>modèle  Rot Y</String_16>
+<String_17>modèle  échelle</String_17>
+<String_18>Nom du modèle</String_18>
+<String_19>Chemin du modèle</String_19>
+<String_20>Scène est enregistré</String_20>
+</Language>
+<Language LanguageID = "SP">
+<String_1>Bienvenido</String_1>
+<String_2>Gracias por elegir este juego!</String_2>
+<String_3>Escena está en pausa. Pulse el botón " P " de nuevo</String_3>
+<String_4>Si necesita hacer una pausa presione la tecla " P".</String_4>
+<String_5>Pulse la tecla "P " de nuevo para continuar.</String_5>
+<String_6>La cámara del ojo X</String_6>
+<String_7>La cámara del ojo Y</String_7>
+<String_8>La cámara del ojo Z</String_8>
+<String_9>Cámara pos X</String_9>
+<String_10>Cámara pos Y</String_10>
+<String_11>modelo pos X</String_11>
+<String_12>modelo pos Y</String_12>
+<String_13>modelo pos Z</String_13>
+<String_14>modelo Rot X</String_14>
+<String_15>modelo Rot Y</String_15>
+<String_16>modelo Rot Y</String_16>
+<String_17>modelo escala</String_17>
+<String_18>nombre del modelo</String_18>
+<String_19>camino de modelo</String_19>
+<String_20>Se guarda Escena</String_20>
+</Language>
+<Language LanguageID = "HI">
+<String_1>Velakama</String_1>
+<String_2>Isa khela ko cunane ke li'e dhan'yavada!</String_2>
+<String_3>Dr?sya roka diya gaya hai. Presa" pi" phira se</String_3>
+<String_4>Apa presa" pi" kun¯ji ko thamane ke li'e ki jarurata hai.</String_4>
+<String_5>Presa" pi" kun¯ji phira se jari rakhane ke li'e</String_5>
+<String_6>Kaimare ki a?kha X</String_6>
+<String_7>Kaimare ki a?kha Y</String_7>
+<String_8>Kaimare ki a?kha Z</String_8>
+<String_9>Kaimare ki sthiti X</String_9>
+<String_10>Kaimare ki sthiti Y</String_10>
+<String_11>Mo?ala sthiti X</String_11>
+<String_12>Mo?ala sthiti Y</String_12>
+<String_13>Mo?ala sthiti Z</String_13>
+<String_14>Mo?ala ro?esana X</String_14>
+<String_15>Mo?ala ro?esana Y</String_15>
+<String_16>Mo?ala ro?esana Z</String_16>
+<String_17>Mo?ala paimane</String_17>
+<String_18>Mo?ala ka nama</String_18>
+<String_19>Mo?ala ka patha</String_19>
+<String_20>Dr?sya saheja jata hai</String_20>
+</Language>
+</Localization>
